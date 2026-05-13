@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\pooja\Downloads\GI_Ensemble_Flask_App\GI_Ensemble_Flask_App\tf_env"
+VIRTUAL_ENV="C:\prj review 2k26\GI_Ensemble_Flask_App\GI_Ensemble_Flask_App\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -55,9 +55,9 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
-    PS1="(tf_env) ${PS1:-}"
+    PS1="(venv) ${PS1:-}"
     export PS1
-    VIRTUAL_ENV_PROMPT="(tf_env) "
+    VIRTUAL_ENV_PROMPT="(venv) "
     export VIRTUAL_ENV_PROMPT
 fi
 
