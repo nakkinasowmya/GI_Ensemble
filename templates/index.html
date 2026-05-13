@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Upload Medical Image</title>
+  <style>
+     body {
+      background-image: url('https://www.shutterstock.com/image-photo/doctor-work-tablet-computerdigital-healthcare-260nw-2474856299.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 60px;
+      margin: 0;
+    }
+
+    .upload-box {
+      background-color: white;
+      border-radius: 20px;
+      padding: 40px;
+      display: inline-block;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .upload-box h2 {
+      margin-bottom: 20px;
+    }
+
+    input[type="file"] {
+      padding: 10px;
+      margin: 20px 0;
+    }
+
+    .btn {
+      background-color: #009ecf;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 10px;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background-color: #007fa3;
+    }
+  </style>
+</head>
+<body>
+  <div class="upload-box">
+    <h2>Upload GI Image</h2>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgObuxQA_W-8zqnXC6onsjIb3a1saMSrMv3g&s" width="100" />
+
+    <p><strong>Upload Your File</strong></p>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+
+      <input type="file" name="file" accept="image/*" required />
+
+      <br />
+
+      <button class="btn" type="submit">Upload & Continue</button>
+
+    </form>
+
+  </div>
+</body>
+</html>

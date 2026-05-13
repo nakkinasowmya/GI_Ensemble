@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Diagnosis Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url('https://www.shutterstock.com/image-photo/doctor-work-tablet-computerdigital-healthcare-260nw-2474856299.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            backdrop-filter: blur(2px);
+        }
+
+        .container {
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.6); /* dark overlay for contrast */
+            color: white;
+            border-radius: 10px;
+            margin: 50px auto;
+            max-width: 1000px;
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .image-box {
+            text-align: center;
+        }
+
+        .image-box img {
+            max-width: 350px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Prediction Result</h1>
+
+    {% if prediction %}
+        <h2 style="color: #4DB8FF;">Prediction: <span>{{ prediction }}</span></h2>
+    {% endif %}
+
+    <div class="image-row">
+        {% if uploaded_image %}
+        <div class="image-box">
+            <h3>Original Image</h3>
+            <img src="{{ url_for('static', filename=uploaded_image) }}" alt="Uploaded Image" />
+        </div>
+        {% endif %}
+
+        {% if combined_gradcam %}
+        <div class="image-box">
+            <h3>Grad-CAM Visualization</h3>
+            <img src="{{ url_for('static', filename=combined_gradcam) }}" alt="Grad-CAM Heatmap" />
+        </div>
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>

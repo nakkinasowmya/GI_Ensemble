@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Endolab</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bg-blur {
+      background-image: url("https://media.istockphoto.com/id/1127345016/vector/cardiology.jpg?s=612x612&w=0&k=20&c=zCeoDolsukAs17EnNjLSDl2pV0cLyFaQOjjp_aYat2s=");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      filter: blur(6px);
+      z-index: -1;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: rgba(0, 91, 102, 0.8); /* translucent navbar */
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav span {
+      margin-left: 30px;
+      font-size: 16px;
+      cursor: default;
+    }
+
+    .main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 50px;
+      min-height: 80vh;
+    }
+
+    .left-content h4 {
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .left-content h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      line-height: 1.2;
+    }
+
+    .left-content button {
+      padding: 12px 25px;
+      background-color: #00c4b4;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .left-content button:hover {
+      background-color: #009e91;
+    }
+
+    .right-content img {
+      width: 400px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .right-content {
+        margin-top: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-blur"></div> <!-- Blurred Background Layer -->
+
+  <header>
+    <div class="logo">Endolab</div>
+    <nav>
+      <span>Home</span>
+      <span>Services</span>
+      <span>Blog</span>
+      <span>Contact</span>
+    </nav>
+  </header>
+
+  <section class="main">
+    <div class="left-content">
+      <h4>Welcome To Endolab</h4>
+      <h1>GI Disease<br>Classification</h1>
+      <button onclick="window.location.href='/upload'">Start Diagnosis</button>
+    </div>
+    <div class="right-content">
+      <img src="https://drdeepbhadra.com/img/services/endoscopy.jpg" alt="Doctors Image" />
+    </div>
+  </section>
+
+</body>
+</html>
